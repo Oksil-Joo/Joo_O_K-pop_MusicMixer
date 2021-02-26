@@ -1,5 +1,6 @@
 # Audio Mixer Project.
-![TitleImage](https://user-images.githubusercontent.com/72535594/109359553-acb39100-7853-11eb-91bf-c38bf6432b0e.png)
+![TitleImage](https://user-images.githubusercontent.com/72535594/109361266-a541b700-7856-11eb-8f82-99fa49eadc3e.png)
+
 This is Oksil’s Audio Mixer of K-pop. I created an audio Mixer based on the Java Script. The theme of my Audio Mixer is **My Favorite Korean Musics**.
 
 ### To run
