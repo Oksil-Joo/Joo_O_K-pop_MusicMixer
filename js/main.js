@@ -3,13 +3,17 @@
   // select and work with our audio element
   console.log('fired!');
 
-  const playZone = document.querySelector("#playZone"),
-        audioTapes = document.querySelectorAll(".tapeImage"),
-        audioControllButtons = document.querySelectorAll(".audioController"),
-        theAudio = document.querySelector("audio");
+  const dropZone = document.querySelector(".drop-zone"),
+        tapes = document.querySelectorAll(".tapeImage");
+
+
+  let theAudio = document.querySelector("audio"),
+      audioControllButtons = document.querySelectorAll(".audioController"),
+      albumArt = document.querySelectorAll(".tapeImage");
 
 function dragStart() {
   console.log('sgarted draggin');
+  event.dataTransfer.setData("savedID", this.id);
 }
 
 function draggedOver(event) {
@@ -19,18 +23,14 @@ function draggedOver(event) {
 
 function dropped(event) {
   event.preventDefault();
-  console.log('dragged over me');
-}
-
-function dropped(event) {
-  event.preventDefault();
-  console.log('dropped somethin on me');
+  let targetID = event.dataTransfer.getData("savedID");
+  console.log("I dragged this image:", targetID);
 }
 function loadTrack() {
 
     let targetTrack = this.dataset.trackref;
 
-    theAudio.src = `audio/${targetTrack}.mp3`;
+    theAudio.src = `sounds/${targetTrack}.mp3`;
     theAudio.volume = 0.5;
     theAudio.load();
 
@@ -54,7 +54,7 @@ function loadTrack() {
   }
 
 
-  for (tapeImage of audioTapes) {
+  for (tapeImage of albumArt) {
     tapeImage.addEventListener("click", loadTrack);
   }
 
@@ -62,11 +62,8 @@ function loadTrack() {
   audioControllButtons[1].addEventListener("click", playTrack);
   audioControllButtons[2].addEventListener("click", stopTrack);
 
-audioTapes.addEventListener("dragstart", dragStart);
-playZone.forEach(zone => {
-        zone.addEventListener("dragover", draggedOver);
-        zone.addEventListener("drop", dropped);
-
-})
+  tapes.forEach(piece => piece.addEventListener("dragStart", dragStart));
+  dropZone.addEventListener("dragover", draggedOver);
+  dropZone.addEventListener("drop", dropped);
 
 })();

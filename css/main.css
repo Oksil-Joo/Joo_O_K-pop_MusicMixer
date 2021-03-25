@@ -14,13 +14,14 @@ body { background-image:url(../images/MIXER_BG.svg);
 	margin: 0 auto;
 	padding: 0px;
 }
-#playZone {
-  width: 160px;
-  height: 95px;
+.drop-zone {
+  width: 170px;
+  height: 100px;
 	border: thin solid white;
-	position: absolute;
-	top: 325px;
-	left: 525px;
+	position: relative;
+	float: left;
+	top: 323px;
+	left: 366px;
 }
 
 #controllContainer {
@@ -65,7 +66,7 @@ body { background-image:url(../images/MIXER_BG.svg);
 .stop:hover {background-position:-48px -30px;}
 
 
-#tapeZone {
+.tape-pieces {
   width: 896px;
   height: 239px;
 	position: absolute;
