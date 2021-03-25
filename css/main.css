@@ -16,11 +16,13 @@ body { background-image:url(../images/MIXER_BG.svg);
 }
 #playZone {
   width: 160px;
-  height: 100px;
+  height: 95px;
+	border: thin solid white;
 	position: absolute;
 	top: 325px;
 	left: 525px;
 }
+
 #controllContainer {
   display: flex;
   flex-flow: row;
@@ -34,6 +36,8 @@ body { background-image:url(../images/MIXER_BG.svg);
 	position: absolute;
 	top: 450px;
 	left: 535px;
+	margin: 0px;
+	padding: 0px;
 }
 
 #navList li {
@@ -59,8 +63,7 @@ body { background-image:url(../images/MIXER_BG.svg);
 .play:hover {background-position:-24px -30px;}
 .stop {background-position:-48px 0px;}
 .stop:hover {background-position:-48px -30px;}
-.forword {background-position:-72px -0px;}
-.forword:hover {background-position:-72px -30px;}
+
 
 #tapeZone {
   width: 896px;
@@ -70,8 +73,9 @@ body { background-image:url(../images/MIXER_BG.svg);
 	left: 220px;
 }
 
-#tapeZone img {
+.tapeImage {
   width: 140px;
-  height: 89px;
   padding: 15px 15px;
+	cursor: pointer;
+
 }
