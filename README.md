@@ -16,8 +16,8 @@ An audio mixer was produced to demonstrate the drag, drop, drag start learning i
 The project was inspired by the 1970s and 1980s when the tape was put into audio and listened to music.
 
 ### Colors
-* Main colour is #6a539f, #be68a3, #6ca0ad, and #dff4f9
-* Sub colour is #978c9b and #fcc1e9.
+* Main colour is #978c9b, #dff4f9, and #6ca0ad.
+* Sub colour is #3fa9f5, #cccccc and #695970.
 
 ### AUTHORS
 Designed and developed by Oksil Joo.
