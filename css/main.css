@@ -3,39 +3,38 @@
 
 .hidden { display: none }
 
-body { background-image:url(../images/MIXER_BG.svg);
-	background-repeat:no-repeat; background-position:center center;
-	background-color:#fff; font-size:16px; }
+body {  font-size:16px;
+
+}
 
 #container {
+	background-image:url(../images/MIXER_BG.svg);
+	background-repeat:no-repeat; background-position:center center;
+	background-color:#fff;
 	width:1024px;
 	height: 768px;
 	text-align:center;
 	margin: 0 auto;
 	padding: 0px;
+	position: relative;
 }
 .drop-zone {
-  width: 140px;
+  width: 150px;
   height: 90px;
 	position: relative;
 	float: left;
 	top: 330px;
-	left: 370px;
+	left: 367px;
 }
 
-#controllContainer {
-  display: flex;
-  flex-flow: row;
-  justify-content: flex-start;
-  margin-left: 570px;
-}
 
 #ControllerZone {
-  width: 140px;
-  height: 30px;
-	position: absolute;
-	top: 450px;
-	left: 535px;
+  /* width: 140px;
+  height: 30px; */
+	width: 250px;
+	position: relative;
+	top: 447px;
+	left: 250px;
 	margin: 0px;
 	padding: 0px;
 }
@@ -43,8 +42,10 @@ body { background-image:url(../images/MIXER_BG.svg);
 #navList li {
 	display:inline;
 	list-style-type:none;
-	padding:0px 2px;
+	/* padding:0px 2px; */
 	cursor:pointer;
+	/* width: 140px;
+	height: 30px; */
 }
 
 .audioController {

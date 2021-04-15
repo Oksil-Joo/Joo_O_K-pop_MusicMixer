@@ -39,7 +39,6 @@ function loadTrack() {
     theAudio.volume = 0.5;
     theAudio.load();
 
-    playTrack();
   }
 
   function rewindTrack() {
@@ -60,7 +59,7 @@ function loadTrack() {
 
 
   for (tapeImage of albumArt) {
-    tapeImage.addEventListener("click", loadTrack);
+    tapeImage.addEventListener("dragover", loadTrack);
   }
 
   audioControllButtons[0].addEventListener("click", rewindTrack);
