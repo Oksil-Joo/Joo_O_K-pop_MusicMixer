@@ -4,6 +4,7 @@
   console.log('fired!');
 
   const dropZone = document.querySelector(".drop-zone"),
+        collecter = document.querySelector(".tape-pieces"),
         tapes = document.querySelectorAll(".tapeImage");
 
 
@@ -20,6 +21,7 @@ function draggedOver(event) {
   event.preventDefault();
   console.log('dragged over me');
 
+
 }
 
 function dropped(event) {
@@ -29,6 +31,8 @@ function dropped(event) {
   console.log("I dragged this image:", targetID);
 
   event.target.appendChild(document.querySelector(`#${targetID}`));
+
+
 }
 
 function loadTrack() {
@@ -39,6 +43,7 @@ function loadTrack() {
     theAudio.volume = 0.5;
     theAudio.load();
 
+    playTrack();
   }
 
   function rewindTrack() {
@@ -59,7 +64,10 @@ function loadTrack() {
 
 
   for (tapeImage of albumArt) {
-    tapeImage.addEventListener("dragover", loadTrack);
+
+    tapeImage.addEventListener("dragstart", loadTrack);
+    tapeImage.addEventListener("dragleave", stopTrack);
+
   }
 
   audioControllButtons[0].addEventListener("click", rewindTrack);
@@ -69,5 +77,7 @@ function loadTrack() {
   tapes.forEach(piece => piece.addEventListener("dragstart", dragStart));
   dropZone.addEventListener("dragover", draggedOver);
   dropZone.addEventListener("drop", dropped);
+  collecter.addEventListener("dragover", draggedOver);
+  collecter.addEventListener("drop", dropped);
 
 })();
