@@ -3,44 +3,49 @@
 
 .hidden { display: none }
 
-body { background-image:url(../images/MIXER_BG.svg);
-	background-repeat:no-repeat; background-position:center center;
-	background-color:#fff; font-size:16px; }
+body {  font-size:16px;
+
+}
 
 #container {
+	background-image:url(../images/MIXER_BG.svg);
+	background-repeat:no-repeat; background-position:center center;
+	background-color:#fff;
 	width:1024px;
 	height: 768px;
 	text-align:center;
 	margin: 0 auto;
 	padding: 0px;
+	position: relative;
 }
-#playZone {
-  width: 160px;
-  height: 100px;
-	position: absolute;
-	top: 325px;
-	left: 525px;
-}
-#controllContainer {
-  display: flex;
-  flex-flow: row;
-  justify-content: flex-start;
-  margin-left: 570px;
+.drop-zone {
+  width: 150px;
+  height: 90px;
+	position: relative;
+	float: left;
+	top: 330px;
+	left: 367px;
 }
 
+
 #ControllerZone {
-  width: 140px;
-  height: 30px;
-	position: absolute;
-	top: 450px;
-	left: 535px;
+  /* width: 140px;
+  height: 30px; */
+	width: 250px;
+	position: relative;
+	top: 447px;
+	left: 250px;
+	margin: 0px;
+	padding: 0px;
 }
 
 #navList li {
 	display:inline;
 	list-style-type:none;
-	padding:0px 2px;
+	/* padding:0px 2px; */
 	cursor:pointer;
+	/* width: 140px;
+	height: 30px; */
 }
 
 .audioController {
@@ -59,19 +64,19 @@ body { background-image:url(../images/MIXER_BG.svg);
 .play:hover {background-position:-24px -30px;}
 .stop {background-position:-48px 0px;}
 .stop:hover {background-position:-48px -30px;}
-.forword {background-position:-72px -0px;}
-.forword:hover {background-position:-72px -30px;}
 
-#tapeZone {
+
+.tape-pieces {
   width: 896px;
   height: 239px;
-	position: absolute;
-	top: 500px;
-	left: 220px;
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0 auto;
+	padding-top: 400px;
 }
 
-#tapeZone img {
+.tapeImage {
   width: 140px;
-  height: 89px;
-  padding: 15px 15px;
+	cursor: pointer;
+	padding: 0px 15px;
 }
