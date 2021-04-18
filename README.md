@@ -4,7 +4,11 @@
 This is Oksil’s Audio Mixer of K-pop. I created an audio Mixer based on the Java Script. The theme of my Audio Mixer is **My favorite Korean Musics**.
 
 ### To run
-The index.html file must be executed to execute the music play.
+1.The index.html file must be executed to play the K-pop Music Mixer.
+2.Drag the tape image you want to listen to into the radio tape area from the selection. The tape can be stop, rewind, and play using buttons.
+3.If you want to listen to other music, the previous tape drags down to the area where the tape was, and then drag and drop the other tape and drag it into the tape area on the radio.
+4.enjoy the music.
+
 
 ### Reason for Application
 An audio mixer was produced to demonstrate the drag, drop, drag start learning in a Multimedia Authoring class.
@@ -23,9 +27,10 @@ The project was inspired by the 1970s and 1980s when the tape was put into audio
 Designed and developed by Oksil Joo.
 
 ### Tools used
-* html
-* CSS3
-* Java Script
+* Illustrator : created background Image.
+* html : create UI Interface.
+* CSS3 : Arrangement of all elements
+* Java Script : codding drag and drop, and control buttons.
 * Markdown
 
 ## License
