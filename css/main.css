@@ -8,24 +8,66 @@ body { background-image:url(../images/MIXER_BG.svg);
 	background-color:#fff; font-size:16px; }
 
 #container {
-  position: relative;
+	width:1024px;
+	height: 768px;
+	text-align:center;
+	margin: 0 auto;
+	padding: 0px;
 }
-
 #playZone {
-  width: 154px;
-  height: 97px;
-  margin-top: 377px;
-  margin-left: 326px;
-  padding: 0;
-
+  width: 160px;
+  height: 100px;
+	position: absolute;
+	top: 325px;
+	left: 525px;
 }
+#controllContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin-left: 570px;
+}
+
+#ControllerZone {
+  width: 140px;
+  height: 30px;
+	position: absolute;
+	top: 450px;
+	left: 535px;
+}
+
+#navList li {
+	display:inline;
+	list-style-type:none;
+	padding:0px 2px;
+	cursor:pointer;
+}
+
+.audioController {
+	width:24px;
+	height:30px;
+  display:inline-block;
+	background-image:url(../images/BT_audio.png);
+	background-repeat:no-repeat;
+	transition:transform .3s;
+	background-color: grey;
+}
+
+.rewind {background-position:0px 0px;}
+.rewind:hover {background-position:0px -30px;}
+.play {background-position:-24px 0px;}
+.play:hover {background-position:-24px -30px;}
+.stop {background-position:-48px 0px;}
+.stop:hover {background-position:-48px -30px;}
+.forword {background-position:-72px -0px;}
+.forword:hover {background-position:-72px -30px;}
 
 #tapeZone {
-  margin-top: 100px;
   width: 896px;
   height: 239px;
-  margin: 0 auto;
-
+	position: absolute;
+	top: 500px;
+	left: 220px;
 }
 
 #tapeZone img {
@@ -33,22 +75,3 @@ body { background-image:url(../images/MIXER_BG.svg);
   height: 89px;
   padding: 15px 15px;
 }
-
-.audioController {
-	width:26px;
-	height:30px;
-	display:inline-block;
-	background-image:url(../images/BT_audio.png);
-	background-repeat:no-repeat;
-	transition:transform .3s;
-	-webkit-transition:-webkit-transform .3s;
-	-moz-transition:-moz-transform .3s;
-}
-
-.rewind {background-position:0px -30px;}
-
-.play {background-position:-26px -30px;}
-
-.stop {background-position:-52px -30px;}
-
-.forword {background-position:-78px -30px;}
